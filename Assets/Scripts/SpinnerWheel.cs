@@ -33,7 +33,6 @@ public class SpinnerWheel : MonoBehaviour
     [SerializeField]
     [Range(0f, 1f)]
     float ColorVal = .5f;
-    
     public UnityEvent OnSpin;
     public UnityEvent<int> OnResult;
     
@@ -75,6 +74,10 @@ public class SpinnerWheel : MonoBehaviour
         }
     }
 
+    private void Start() 
+    {
+        Draw();    
+    }
     private SpinnerWheelInputHandler spinCollider
     {
         get
